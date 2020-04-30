@@ -13,6 +13,7 @@ Libraries needed:
 
 Just in case you are not able to run it, I include a requirements.txt with all the dependencies I have installed in the conda environment. You can check the versions there.
 
+### Running the algorithm
 Repeat step 1 and 2 for every split (0,1,2,3,4):
 1) Run *split_X/main_train.py*
 2) Run *split_X/submission.py*
