@@ -20,4 +20,7 @@ Repeat step 1 and 2 for every split (0,1,2,3,4):
 Once all submission files are generated, run *final_submission.py*
 
 ## Method
-[Code explained]
+I used Roberta model with a final layer of a single neuron to predict a value between -1 and 1. The network is trained with MSE loss and evaluated with RSME metric as it is the objective metric in the competition. I used AdamW optimizer and trained two different stages, first all freezed but the final regression layer and finally, the whole network. 
+
+As the dataset is really small, it is 10,000 training samples, each split obtained different results in the public leaderboard. Therefore, I decided to stack 4 models trained on different splits. Additionally, I trained a last 5th split dropping the samples with 0.33 agreement. This way, the network learned from samples with higher confidence labels. 
+
